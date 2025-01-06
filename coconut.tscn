@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpb8vqnpapk7r"]
+
+[ext_resource type="Script" path="res://Coconut.gd" id="1_arxud"]
+[ext_resource type="Texture2D" uid="uid://c5dqbb7ufg2jr" path="res://SonicMarsh/mobs/coconut - sonic and marsh.png" id="2_lqtb1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hdwpb"]
+radius = 0.0273437
+
+[node name="Coconut" type="Path2D"]
+script = ExtResource("1_arxud")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotation = -2.15315
+rotates = false
+
+[node name="Sprite2D" type="Sprite2D" parent="PathFollow2D"]
+rotation = -4.1277
+texture = ExtResource("2_lqtb1")
+
+[node name="Area2D" type="Area2D" parent="PathFollow2D/Sprite2D"]
+scale = Vector2(16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Sprite2D/Area2D"]
+scale = Vector2(16, 16)
+shape = SubResource("CircleShape2D_hdwpb")
+
+[connection signal="body_entered" from="PathFollow2D/Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]

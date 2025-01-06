@@ -1,0 +1,212 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqq3h0r48d44m"]
+
+[ext_resource type="Script" path="res://Bridge.gd" id="1_o506c"]
+[ext_resource type="Texture2D" uid="uid://dwm844fiqqwhd" path="res://SonicMarsh/Water/bridge log - sonic and marsh.png" id="2_vfsqi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8l43"]
+size = Vector2(534, 12.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_s3ccy"]
+a = Vector2(4.39209, -9.20386)
+b = Vector2(-10.5693, 35.8091)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4mb1w"]
+a = Vector2(3.54016, -9.35229)
+b = Vector2(13.2965, 37.752)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_puw5b"]
+size = Vector2(422, 20)
+
+[node name="Bridge" type="StaticBody2D" node_paths=PackedStringArray("endofbridge")]
+position = Vector2(3078, 533)
+script = ExtResource("1_o506c")
+lognum = 40
+endofbridge = NodePath("")
+collisiony = 15
+
+[node name="PlaceatendofBridge" type="Marker2D" parent="."]
+visible = false
+position = Vector2(504, 2)
+
+[node name="Log1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log3" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log4" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log5" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log6" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log7" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log8" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log9" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log10" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log11" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log12" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log13" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log14" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log15" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log16" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log17" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log18" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log19" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log20" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log21" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log22" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log23" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log24" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log25" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log26" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log27" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log28" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log29" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log30" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log31" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log32" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log33" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log34" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log35" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log36" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log37" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log38" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log39" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Log40" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_vfsqi")
+
+[node name="Floor" type="CollisionShape2D" parent="."]
+position = Vector2(248, 15)
+shape = SubResource("RectangleShape2D_e8l43")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(495, -3)
+rotation = 0.928151
+shape = SubResource("SegmentShape2D_s3ccy")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 2)
+rotation = -1.00536
+shape = SubResource("SegmentShape2D_4mb1w")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(250, -8)
+shape = SubResource("RectangleShape2D_puw5b")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

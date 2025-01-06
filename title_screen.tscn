@@ -1,0 +1,349 @@
+[gd_scene load_steps=45 format=3 uid="uid://cpnif07hsl6hr"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_b31aw"]
+[ext_resource type="Texture2D" uid="uid://bn37biskgta6l" path="res://SonicMarsh/title screen - sonic and marsh/sega - sonic and marsh.png" id="2_vfi4j"]
+[ext_resource type="Texture2D" uid="uid://7a8if67ynksc" path="res://SonicMarsh/title screen - sonic and marsh/title screen bg - sonic and marsh-1.png.png" id="3_s5yxu"]
+[ext_resource type="Texture2D" uid="uid://bs7x4ul0tf0e4" path="res://SonicMarsh/title screen - sonic and marsh/title screen ring - sonic and marsh-10.png (1).png" id="4_l3wrh"]
+[ext_resource type="Texture2D" uid="uid://d2xdi36pabhs0" path="res://SonicMarsh/title screen - sonic and marsh/sonic and marsh logo - sonic and marsh-4.png.png" id="5_ooo3a"]
+[ext_resource type="Texture2D" uid="uid://dm8x6ofpgo3lg" path="res://SonicMarsh/title screen - sonic and marsh/title screen anim 1 - sonic and marsh.png" id="6_mjiu2"]
+[ext_resource type="Texture2D" uid="uid://b7r23hs1p8moq" path="res://SonicMarsh/title screen - sonic and marsh/title screen sonic finger wave - sonic and marsh.png" id="6_saql2"]
+[ext_resource type="Texture2D" uid="uid://mfy711pafav5" path="res://SonicMarsh/title screen - sonic and marsh/press start - sonic and marsh-5.png.png" id="7_rp7sq"]
+[ext_resource type="Texture2D" uid="uid://dn0bq5jl8nam6" path="res://SonicMarsh/title screen - sonic and marsh/copyright - sonic and marsh-6.png" id="8_d7mou"]
+[ext_resource type="Texture2D" uid="uid://dp75anaoonjk8" path="res://SonicMarsh/title screen - sonic and marsh/blank - sonic and marsh.png" id="8_w4jk6"]
+[ext_resource type="Texture2D" uid="uid://djqwi1vpp42bk" path="res://SonicMarsh/title screen - sonic and marsh/title screen marsh - sonic and marsh-1.png (1).png" id="9_l5xh8"]
+[ext_resource type="Texture2D" uid="uid://d00guumdn65y8" path="res://SonicMarsh/title screen - sonic and marsh/title screen marsh blink - sonic and marsh.png" id="9_nqjqj"]
+[ext_resource type="Texture2D" uid="uid://ci84av4cki32m" path="res://SonicMarsh/title screen - sonic and marsh/title screen sonic blink - sonic and marsh.png" id="11_mea65"]
+[ext_resource type="AudioStream" uid="uid://e82u5m2wdx83" path="res://SonicMarsh/audio/Sega Intro (Sonic 1).mp3" id="14_1b2vu"]
+[ext_resource type="AudioStream" uid="uid://d31nu8jjanw2t" path="res://SonicMarsh/audio/Title Screen - Sonic the Hedgehog 3 [OST].mp3" id="15_jw2fh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oywjb"]
+atlas = ExtResource("6_mjiu2")
+region = Rect2(0, 0, 319, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrtbw"]
+atlas = ExtResource("6_mjiu2")
+region = Rect2(319, 0, 319, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5teb"]
+atlas = ExtResource("6_mjiu2")
+region = Rect2(0, 224, 319, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dcx3"]
+atlas = ExtResource("6_mjiu2")
+region = Rect2(319, 224, 319, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5d7l"]
+atlas = ExtResource("6_mjiu2")
+region = Rect2(0, 448, 319, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ae11t"]
+atlas = ExtResource("6_mjiu2")
+region = Rect2(319, 448, 319, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpwhv"]
+atlas = ExtResource("6_mjiu2")
+region = Rect2(0, 672, 319, 224)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5vte1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oywjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrtbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5teb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dcx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5d7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ae11t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpwhv")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 16.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2lqg"]
+atlas = ExtResource("7_rp7sq")
+region = Rect2(0, 0, 319, 224)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tfow1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2lqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_w4jk6")
+}],
+"loop": true,
+"name": &"pressstartflash",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhdsx"]
+atlas = ExtResource("9_nqjqj")
+region = Rect2(0, 0, 120, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_740qy"]
+atlas = ExtResource("9_nqjqj")
+region = Rect2(120, 0, 120, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2ivt"]
+atlas = ExtResource("9_nqjqj")
+region = Rect2(0, 119, 120, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erbms"]
+atlas = ExtResource("9_nqjqj")
+region = Rect2(120, 119, 120, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gmmg"]
+atlas = ExtResource("9_l5xh8")
+region = Rect2(0, 0, 120, 119)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ygjfr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhdsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_740qy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2ivt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_erbms")
+}],
+"loop": false,
+"name": &"blink",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gmmg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1ku3"]
+atlas = ExtResource("11_mea65")
+region = Rect2(0, 0, 110, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqq0i"]
+atlas = ExtResource("11_mea65")
+region = Rect2(110, 0, 110, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyhiw"]
+atlas = ExtResource("11_mea65")
+region = Rect2(0, 113, 110, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wloc3"]
+atlas = ExtResource("11_mea65")
+region = Rect2(110, 113, 110, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebux0"]
+atlas = ExtResource("11_mea65")
+region = Rect2(0, 226, 110, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0bxb"]
+atlas = ExtResource("11_mea65")
+region = Rect2(110, 226, 110, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ty1b0"]
+atlas = ExtResource("6_saql2")
+region = Rect2(0, 0, 110, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bhm1"]
+atlas = ExtResource("6_saql2")
+region = Rect2(110, 0, 110, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybjbj"]
+atlas = ExtResource("6_saql2")
+region = Rect2(0, 113, 110, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq0ja"]
+atlas = ExtResource("6_saql2")
+region = Rect2(110, 113, 110, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkkbo"]
+atlas = ExtResource("6_saql2")
+region = Rect2(0, 226, 110, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5akf"]
+atlas = ExtResource("6_saql2")
+region = Rect2(110, 226, 110, 113)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_krh3f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1ku3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqq0i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyhiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wloc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebux0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0bxb")
+}],
+"loop": false,
+"name": &"blink",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ty1b0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bhm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybjbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq0ja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkkbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5akf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Title Screen" type="Node2D"]
+script = ExtResource("1_b31aw")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="ColorRect1" type="ColorRect" parent="CanvasGroup"]
+offset_left = -24.0
+offset_top = -33.0
+offset_right = 1191.0
+offset_bottom = 682.0
+
+[node name="Sega-SonicAndMarsh" type="Sprite2D" parent="CanvasGroup"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(577, 325)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_vfi4j")
+
+[node name="SonicBlink" type="Timer" parent="CanvasGroup"]
+wait_time = 6.0
+
+[node name="MarshBlink" type="Timer" parent="CanvasGroup"]
+wait_time = 6.0
+
+[node name="BgTitleScreen" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(3359, 321)
+scale = Vector2(2.603, 2.603)
+texture = ExtResource("3_s5yxu")
+region_enabled = true
+region_rect = Rect2(-875.1, 0, 2582.3, 252)
+
+[node name="RingTitleScreen" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(571, -284)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("4_l3wrh")
+
+[node name="LogoTitleScreen" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 3
+position = Vector2(571, 791)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("5_ooo3a")
+
+[node name="Anim1TitleScreen" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 4
+position = Vector2(571, 376)
+scale = Vector2(2.3, 2.3)
+sprite_frames = SubResource("SpriteFrames_5vte1")
+animation = &"jump"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+offset_left = -64.0
+offset_top = -69.0
+offset_right = 1150.0
+offset_bottom = 649.0
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 0)
+z_index = 4
+offset_left = -27.0
+offset_top = -28.0
+offset_right = 1187.0
+offset_bottom = 690.0
+color = Color(0, 0, 0, 1)
+
+[node name="PressStart" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(571, 324)
+scale = Vector2(2.9, 2.9)
+sprite_frames = SubResource("SpriteFrames_tfow1")
+animation = &"pressstartflash"
+
+[node name="Copyright" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 3
+position = Vector2(686, 330)
+scale = Vector2(2.9, 2.9)
+texture = ExtResource("8_d7mou")
+
+[node name="TitleScreenMarsh" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(686, 167)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_ygjfr")
+animation = &"blink"
+
+[node name="TitleScreenSonicFingerWave" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 3
+position = Vector2(430, 167)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_krh3f")
+animation = &"idle"
+
+[node name="SegaSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_1b2vu")
+
+[node name="TitleMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_jw2fh")
+
+[connection signal="timeout" from="CanvasGroup/SonicBlink" to="." method="_on_sonic_blink_timeout"]
+[connection signal="timeout" from="CanvasGroup/MarshBlink" to="." method="_on_marsh_blink_timeout"]
+[connection signal="animation_finished" from="Anim1TitleScreen" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="TitleScreenMarsh" to="." method="_on_title_screen_marsh_animation_finished"]
+[connection signal="animation_finished" from="TitleScreenSonicFingerWave" to="." method="_on_title_screen_sonic_finger_wave_animation_finished"]

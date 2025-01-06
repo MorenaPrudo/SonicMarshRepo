@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://bf0qk0yndgvfm"]
+
+[ext_resource type="Script" path="res://RedSpring.gd" id="1_50x6a"]
+[ext_resource type="Texture2D" uid="uid://0cm25w3pro44" path="res://SonicMarsh/spring (yellow) - sonic and marsh.png" id="2_doulw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tocbs"]
+atlas = ExtResource("2_doulw")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rh0ye"]
+atlas = ExtResource("2_doulw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vb0a0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tocbs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rh0ye")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xed04"]
+size = Vector2(28, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77b4i"]
+size = Vector2(32, 16)
+
+[node name="YellowSpring" type="RigidBody2D"]
+mass = 10.0
+freeze = true
+script = ExtResource("1_50x6a")
+bouncestrength = 1000
+bounceDirection = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vb0a0")
+frame = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_xed04")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_77b4i")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

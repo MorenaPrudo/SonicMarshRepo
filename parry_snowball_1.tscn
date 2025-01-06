@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://5wc24lj7cbjg"]
+
+[ext_resource type="Script" path="res://parry_snowball_1.gd" id="1_rnf6v"]
+[ext_resource type="Texture2D" uid="uid://crb25jpmnni2l" path="res://SonicMarsh/bosses/snowball - sonic and marsh.png" id="1_tvfux"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_ox8cj"]
+
+[sub_resource type="Curve2D" id="Curve2D_dyt7y"]
+_data = {
+"points": PackedVector2Array(-4.48619, 4.63078, 4.48619, -4.63078, 0, 0, 132.205, -202.671, -132.205, 202.671, -413.294, 71.025)
+}
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lm3r7"]
+radius = 0.0606413
+
+[node name="ParrySnowball1" type="Path2D" node_paths=PackedStringArray("snowball", "Area2d")]
+position = Vector2(0, 14.0833)
+scale = Vector2(1.10333, 1.06888)
+curve = SubResource("Curve2D_dyt7y")
+script = ExtResource("1_rnf6v")
+snowball = NodePath("PathFollow2D/Sprite2D")
+Area2d = NodePath("PathFollow2D/Sprite2D/Area2D")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotation = -2.15315
+rotates = false
+
+[node name="Sprite2D" type="Sprite2D" parent="PathFollow2D"]
+modulate = Color(1, 0.678431, 1, 1)
+texture = ExtResource("1_tvfux")
+
+[node name="Area2D" type="Area2D" parent="PathFollow2D/Sprite2D" groups=["instashield"]]
+scale = Vector2(16, 16)
+script = ExtResource("3_ox8cj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Sprite2D/Area2D"]
+scale = Vector2(16, 16)
+shape = SubResource("CircleShape2D_lm3r7")
+
+[connection signal="body_entered" from="PathFollow2D/Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="PathFollow2D/Sprite2D/Area2D" to="." method="_on_area_2d_body_exited"]

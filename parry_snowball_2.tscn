@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://ba24h0q0tbtka"]
+
+[ext_resource type="Script" path="res://ParrySnowball2.gd" id="1_h0sxc"]
+[ext_resource type="Texture2D" uid="uid://crb25jpmnni2l" path="res://SonicMarsh/bosses/snowball - sonic and marsh.png" id="2_yfxpl"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_pg8wp"]
+
+[sub_resource type="Curve2D" id="Curve2D_7n7v0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 201.764, -863.934, -201.764, 863.934, -433, 177)
+}
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qq8t4"]
+radius = 0.0606413
+
+[node name="ParrySnowball2" type="Path2D" node_paths=PackedStringArray("snowball", "Area2d")]
+curve = SubResource("Curve2D_7n7v0")
+script = ExtResource("1_h0sxc")
+snowball = NodePath("PathFollow2D/Sprite2D")
+Area2d = NodePath("PathFollow2D/Sprite2D/Area2D")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotation = -2.15315
+rotates = false
+
+[node name="Sprite2D" type="Sprite2D" parent="PathFollow2D"]
+modulate = Color(1, 0.768627, 1, 1)
+texture = ExtResource("2_yfxpl")
+
+[node name="Area2D" type="Area2D" parent="PathFollow2D/Sprite2D" groups=["instashield"]]
+scale = Vector2(16, 16)
+script = ExtResource("3_pg8wp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Sprite2D/Area2D"]
+scale = Vector2(16, 16)
+shape = SubResource("CircleShape2D_qq8t4")

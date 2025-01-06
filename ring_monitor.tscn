@@ -1,0 +1,159 @@
+[gd_scene load_steps=22 format=3 uid="uid://bwaxtn52j25rw"]
+
+[ext_resource type="Script" path="res://RingMonitor.gd" id="1_mmgnv"]
+[ext_resource type="Texture2D" uid="uid://c738kqe5kuul1" path="res://SonicMarsh/uielements and more/powerups - sonic and marsh.png" id="2_gtoe6"]
+[ext_resource type="Texture2D" uid="uid://b5e0wkv6u311p" path="res://SonicMarsh/uielements and more/monitor - sonic and marsh.png" id="3_0kbqo"]
+[ext_resource type="Texture2D" uid="uid://c1ikwg8s52ikr" path="res://SonicMarsh/mobs/smoke explosion - sonic and marsh.png" id="4_550q1"]
+[ext_resource type="AudioStream" uid="uid://hx86vj8tr387" path="res://SonicMarsh/audio/Badnik Defeated.mp3" id="5_7dlfx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dpnfo"]
+size = Vector2(210, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3aqw0"]
+size = Vector2(61, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_austb"]
+atlas = ExtResource("2_gtoe6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_178db"]
+atlas = ExtResource("2_gtoe6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbn1m"]
+atlas = ExtResource("2_gtoe6")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iopj7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_austb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_178db")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbn1m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sm1fx"]
+atlas = ExtResource("3_0kbqo")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni4x1"]
+atlas = ExtResource("3_0kbqo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ppch0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sm1fx")
+}],
+"loop": true,
+"name": &"broken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni4x1")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpe0l"]
+size = Vector2(26, 30.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_beymx"]
+atlas = ExtResource("4_550q1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw1op"]
+atlas = ExtResource("4_550q1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kt70o"]
+atlas = ExtResource("4_550q1")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abudq"]
+atlas = ExtResource("4_550q1")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_midet"]
+atlas = ExtResource("4_550q1")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mfghe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_beymx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw1op")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kt70o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abudq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_midet")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="RingMonitor" type="Node2D"]
+position = Vector2(313, 68)
+script = ExtResource("1_mmgnv")
+
+[node name="SpindashArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpindashArea"]
+position = Vector2(4, -28)
+shape = SubResource("RectangleShape2D_dpnfo")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.5, -13)
+shape = SubResource("RectangleShape2D_3aqw0")
+
+[node name="Power" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -3)
+sprite_frames = SubResource("SpriteFrames_iopj7")
+frame_progress = 0.910531
+
+[node name="RingMonitor" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ppch0")
+animation = &"on"
+
+[node name="Collision" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+position = Vector2(1, -0.25)
+shape = SubResource("RectangleShape2D_wpe0l")
+
+[node name="SmokeExplosion" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_mfghe")
+frame = 4
+frame_progress = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7dlfx")
+
+[connection signal="body_entered" from="SpindashArea" to="." method="_on_spindash_area_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="animation_finished" from="SmokeExplosion" to="." method="_on_smoke_explosion_animation_finished"]

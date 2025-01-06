@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxtn0tvtkl8ct"]
+
+[ext_resource type="Script" path="res://fireball.gd" id="1_ft5vs"]
+[ext_resource type="Texture2D" uid="uid://c8ihdn3pt031h" path="res://SonicMarsh/bosses/fireball (sonic and marsh).png" id="2_8mpga"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2cpm"]
+atlas = ExtResource("2_8mpga")
+region = Rect2(0, 0, 40, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsvc7"]
+atlas = ExtResource("2_8mpga")
+region = Rect2(40, 0, 40, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqkqn"]
+atlas = ExtResource("2_8mpga")
+region = Rect2(0, 32, 40, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvy56"]
+atlas = ExtResource("2_8mpga")
+region = Rect2(40, 32, 40, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nhcjv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2cpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsvc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqkqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvy56")
+}],
+"loop": false,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_prfcl"]
+radius = 11.0454
+
+[node name="Fireball" type="RigidBody2D"]
+script = ExtResource("1_ft5vs")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nhcjv")
+frame = 3
+frame_progress = 1.0
+
+[node name="hitbox" type="Area2D" parent="Sprite2D"]
+
+[node name="Area2D" type="CollisionShape2D" parent="Sprite2D/hitbox"]
+position = Vector2(8, 1)
+shape = SubResource("CircleShape2D_prfcl")
+
+[connection signal="body_entered" from="Sprite2D/hitbox" to="." method="_on_hitbox_body_entered"]

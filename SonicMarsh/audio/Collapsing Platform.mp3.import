@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cb37dt6x6yikw"
+path="res://.godot/imported/Collapsing Platform.mp3-05bfc2ce2394645c4be189513f75c347.mp3str"
+
+[deps]
+
+source_file="res://SonicMarsh/audio/Collapsing Platform.mp3"
+dest_files=["res://.godot/imported/Collapsing Platform.mp3-05bfc2ce2394645c4be189513f75c347.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

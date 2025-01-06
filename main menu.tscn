@@ -1,0 +1,506 @@
+[gd_scene load_steps=41 format=3 uid="uid://73tqgljl66pe"]
+
+[ext_resource type="Script" path="res://main menu.gd" id="1_tdu1i"]
+[ext_resource type="Texture2D" uid="uid://dnl4i3su584vf" path="res://SonicMarsh/main menu/black bar (main menu) - sonic and marsh.png" id="1_u2yom"]
+[ext_resource type="Texture2D" uid="uid://c8s6888m43xmk" path="res://SonicMarsh/main menu/white bar (main menu) - sonic and marsh.png" id="3_l7vhf"]
+[ext_resource type="Texture2D" uid="uid://dq4l5khdj0xvm" path="res://SonicMarsh/main menu/background (main menu) - sonic and marsh (3).png" id="4_riymr"]
+[ext_resource type="Texture2D" uid="uid://hlwbn41ojris" path="res://SonicMarsh/main menu/main menu text - sonic and marsh.png" id="5_4fstx"]
+[ext_resource type="Texture2D" uid="uid://d12g7avor3lx3" path="res://SonicMarsh/main menu/text bar (main menu) - sonic and marsh.png" id="6_tbb8x"]
+[ext_resource type="Texture2D" uid="uid://b067hbhjsb6cs" path="res://SonicMarsh/main menu/text bar (white) (main menu) - sonic and marsh.png" id="7_f3lu8"]
+[ext_resource type="Texture2D" uid="uid://b8wmid708xpxg" path="res://SonicMarsh/main menu/story mode - sonic and marsh.png" id="7_xhefj"]
+[ext_resource type="Texture2D" uid="uid://crpi4r3epoc8h" path="res://SonicMarsh/main menu/options text - sonic and marsh.png" id="8_3ssjp"]
+[ext_resource type="Texture2D" uid="uid://b4ygvsmrhp355" path="res://SonicMarsh/main menu/credits text - sonic and marsh.png" id="9_7qeow"]
+[ext_resource type="Texture2D" uid="uid://cfruuc6aajifo" path="res://SonicMarsh/main menu/active bar (main menu) - sonic and marsh (2).png" id="10_tuqv2"]
+[ext_resource type="Texture2D" uid="uid://cevqb5fmvj2vt" path="res://SonicMarsh/main menu/Vibrant Meadow Background-1.png" id="12_2keam"]
+[ext_resource type="Texture2D" uid="uid://c04p2uihx57ym" path="res://SonicMarsh/main menu/mainmenumeadowbg.png" id="13_yvagn"]
+[ext_resource type="Texture2D" uid="uid://dx6vyfu4vm0gg" path="res://SonicMarsh/marshfullspeed.webp" id="14_mu8ny"]
+[ext_resource type="Texture2D" uid="uid://00pe7vvfn2dl" path="res://SonicMarsh/sonicfullspeed.png" id="15_k86re"]
+[ext_resource type="Texture2D" uid="uid://bqrxnltgwiedm" path="res://SonicMarsh/main menu/SFX volume (options) - sonic and marsh.png" id="16_eg5lv"]
+[ext_resource type="Texture2D" uid="uid://5x1erh3oui35" path="res://SonicMarsh/main menu/volume (options) - sonic and marsh.png" id="17_wh4ib"]
+[ext_resource type="Texture2D" uid="uid://dlctiwf1ylxem" path="res://SonicMarsh/main menu/back (main menu)- sonic and marsh.png" id="18_d0gh2"]
+[ext_resource type="Texture2D" uid="uid://3upnt3uxk4ne" path="res://SonicMarsh/main menu/on (options) - sonic and marsh.png" id="19_eytht"]
+[ext_resource type="Texture2D" uid="uid://b7lajayub6gir" path="res://SonicMarsh/main menu/galaxy (credits) - sonic and marsh.png" id="20_of1i6"]
+[ext_resource type="Texture2D" uid="uid://cumndns7omkoe" path="res://SonicMarsh/main menu/slimette (credits) - sonic and marsh.png" id="21_rajj2"]
+[ext_resource type="Texture2D" uid="uid://d4mdt232rsexa" path="res://SonicMarsh/main menu/SEGA (credits).png" id="22_wboim"]
+[ext_resource type="Texture2D" uid="uid://fnqrs5d07rrv" path="res://SonicMarsh/main menu/sonic team (credits) - sonic and marsh.png" id="23_1ns30"]
+[ext_resource type="AudioStream" uid="uid://c72j0r4wv8lnb" path="res://SonicMarsh/audio/File Select - Sonic the Hedgehog 3 [OST] (mp3cut.net).mp3" id="24_txnn0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38ov0"]
+atlas = ExtResource("14_mu8ny")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fylx"]
+atlas = ExtResource("14_mu8ny")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3febx"]
+atlas = ExtResource("14_mu8ny")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlvsd"]
+atlas = ExtResource("14_mu8ny")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttr4b"]
+atlas = ExtResource("14_mu8ny")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_th442"]
+atlas = ExtResource("14_mu8ny")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r748"]
+atlas = ExtResource("14_mu8ny")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_li8fk"]
+atlas = ExtResource("14_mu8ny")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwhoc"]
+atlas = ExtResource("14_mu8ny")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wio7l"]
+atlas = ExtResource("14_mu8ny")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6tlhe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38ov0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fylx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3febx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlvsd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttr4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_th442")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r748")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_li8fk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwhoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wio7l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukmu1"]
+atlas = ExtResource("15_k86re")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yifll"]
+atlas = ExtResource("15_k86re")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekdk8"]
+atlas = ExtResource("15_k86re")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77cuw"]
+atlas = ExtResource("15_k86re")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahmuj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukmu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yifll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekdk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77cuw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_tdu1i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -15.0
+offset_top = -9.0
+offset_right = 1167.0
+offset_bottom = 664.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 5
+offset_left = -15.0
+offset_top = -9.0
+offset_right = 1167.0
+offset_bottom = 664.0
+color = Color(0, 0, 0, 1)
+
+[node name="BlackBar(mainMenu)-SonicAndMarsh" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(1796, 324)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("1_u2yom")
+
+[node name="WhiteBar(mainMenu)-SonicAndMarsh" type="Sprite2D" parent="."]
+texture_filter = 4
+position = Vector2(1861, 324)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("3_l7vhf")
+
+[node name="Background(mainMenu)-SonicAndMarsh(3)" type="Sprite2D" parent="."]
+texture_filter = 4
+position = Vector2(1619, 324)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("4_riymr")
+
+[node name="MainMenuText-SonicAndMarsh" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 3
+position = Vector2(475, 150)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("5_4fstx")
+
+[node name="MainMenuTextShadow-SonicAndMarsh2" type="Sprite2D" parent="."]
+modulate = Color(0.67451, 0.619608, 0.0431373, 0)
+position = Vector2(480, 345)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("5_4fstx")
+
+[node name="TextBarStory(mainMenu)-SonicAndMarsh" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(2150, 324)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("6_tbb8x")
+
+[node name="TextBarStoryShadow(mainMenu)-SonicAndMarsh2" type="Sprite2D" parent="."]
+modulate = Color(0, 0.65098, 1, 0)
+position = Vector2(1225, 324)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("7_f3lu8")
+
+[node name="TextBarOptions(mainMenu)-SonicAndMarsh2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(2125, 454)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("6_tbb8x")
+
+[node name="TextBarOptionsShadow(mainMenu)-SonicAndMarsh3" type="Sprite2D" parent="."]
+modulate = Color(0, 0.827451, 0, 0)
+position = Vector2(1200, 454)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("7_f3lu8")
+
+[node name="TextBarCredits(mainMenu)-SonicAndMarsh3" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(2100, 584)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("6_tbb8x")
+
+[node name="TextBarCreditsShadow(mainMenu)-SonicAndMarsh4" type="Sprite2D" parent="."]
+modulate = Color(0.643137, 0.643137, 0.643137, 0)
+position = Vector2(1175, 584)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("7_f3lu8")
+
+[node name="StoryMode-SonicAndMarsh" type="Sprite2D" parent="."]
+z_index = 3
+texture_filter = 3
+position = Vector2(1647, 374)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("7_xhefj")
+
+[node name="storymodebutton" type="Button" parent="StoryMode-SonicAndMarsh"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 50.0
+offset_top = -62.0
+offset_right = 247.0
+offset_bottom = -17.0
+
+[node name="StoryModeShadow-SonicAndMarsh2" type="Sprite2D" parent="."]
+modulate = Color(0, 0.407843, 1, 0)
+z_index = 2
+position = Vector2(515, 374)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("7_xhefj")
+
+[node name="optionstext" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1647, 200)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("8_3ssjp")
+
+[node name="optionsbutton" type="Button" parent="optionstext"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 84.0
+offset_top = 74.0
+offset_right = 210.0
+offset_bottom = 117.0
+
+[node name="optionstextshadow" type="Sprite2D" parent="."]
+modulate = Color(0.67451, 0.619608, 0.0431373, 0)
+self_modulate = Color(0, 0.662745, 0, 1)
+z_index = 2
+position = Vector2(515, 200)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("8_3ssjp")
+
+[node name="CreditsText-SonicAndMarsh" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1647, 483)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("9_7qeow")
+
+[node name="creditbutton" type="Button" parent="CreditsText-SonicAndMarsh"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 85.0
+offset_top = 9.0
+offset_right = 210.0
+offset_bottom = 51.0
+
+[node name="CreditsTextShadow-SonicAndMarsh2" type="Sprite2D" parent="."]
+modulate = Color(0.486275, 0.486275, 0.486275, 0)
+z_index = 2
+position = Vector2(515, 483)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("9_7qeow")
+
+[node name="ActiveBar(mainMenu)-SonicAndMarsh(2)" type="Sprite2D" parent="."]
+modulate = Color(1, 0.670588, 0.2, 1)
+texture_filter = 4
+texture_repeat = 2
+position = Vector2(459, 826)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("10_tuqv2")
+
+[node name="VibrantMeadowBackground-1" type="Sprite2D" parent="."]
+z_index = -3
+texture_repeat = 2
+position = Vector2(658, 324)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("12_2keam")
+region_enabled = true
+region_rect = Rect2(3.51257, 3.19904, 1024.27, 507.342)
+
+[node name="MainMenuMeadowBackground-2" type="Sprite2D" parent="."]
+z_index = -3
+texture_repeat = 2
+position = Vector2(1315, 138)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("13_yvagn")
+region_enabled = true
+region_rect = Rect2(3.51257, 3.19904, 1919.82, 1078.15)
+
+[node name="marshhh" type="AnimatedSprite2D" parent="."]
+z_index = -2
+position = Vector2(120, 361)
+scale = Vector2(2.33, 2.33)
+sprite_frames = SubResource("SpriteFrames_6tlhe")
+
+[node name="sonikku" type="AnimatedSprite2D" parent="."]
+z_index = -2
+position = Vector2(211, 361)
+scale = Vector2(2.33, 2.33)
+sprite_frames = SubResource("SpriteFrames_ahmuj")
+
+[node name="SfxVolume(options)-SonicAndMarsh" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1386, 411)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("16_eg5lv")
+
+[node name="SfxVolumeShadow(options)-SonicAndMarsh2" type="Sprite2D" parent="."]
+modulate = Color(0, 0.427451, 0, 0)
+z_index = 2
+position = Vector2(1386, 411)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("16_eg5lv")
+
+[node name="Volume(options)-SonicAndMarsh" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1325, 286)
+scale = Vector2(0.113, 0.113)
+texture = ExtResource("17_wh4ib")
+
+[node name="VolumeShadow(options)-SonicAndMarsh2" type="Sprite2D" parent="."]
+modulate = Color(0, 0.662745, 0, 0)
+z_index = 2
+position = Vector2(1325, 286)
+scale = Vector2(0.113, 0.113)
+texture = ExtResource("17_wh4ib")
+
+[node name="Back(options)-SonicAndMarsh" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1291, 536)
+scale = Vector2(0.088, 0.088)
+texture = ExtResource("18_d0gh2")
+
+[node name="backbutt(opt)" type="Button" parent="Back(options)-SonicAndMarsh"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -920.0
+offset_top = -455.0
+offset_right = 989.0
+offset_bottom = 511.0
+
+[node name="Back(credits)-SonicAndMarsh2" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1291, 536)
+scale = Vector2(0.088, 0.088)
+texture = ExtResource("18_d0gh2")
+
+[node name="backbutt(credits)" type="Button" parent="Back(credits)-SonicAndMarsh2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -920.0
+offset_top = -455.0
+offset_right = 989.0
+offset_bottom = 511.0
+
+[node name="BackShadow(options)-SonicAndMarsh2" type="Sprite2D" parent="."]
+modulate = Color(0.67451, 0.619608, 0.0431373, 0)
+z_index = 2
+position = Vector2(1291, 536)
+scale = Vector2(0.088, 0.088)
+texture = ExtResource("18_d0gh2")
+
+[node name="BackShadow(credits)-SonicAndMarsh3" type="Sprite2D" parent="."]
+modulate = Color(0.67451, 0.619608, 0.0431373, 0)
+z_index = 2
+position = Vector2(1291, 536)
+scale = Vector2(0.088, 0.088)
+texture = ExtResource("18_d0gh2")
+
+[node name="On(volume, options)-SonicAndMarsh" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1669, 286)
+scale = Vector2(0.079, 0.079)
+texture = ExtResource("19_eytht")
+
+[node name="onvolumebutton" type="Button" parent="On(volume, options)-SonicAndMarsh"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -646.0
+offset_top = -519.0
+offset_right = 595.0
+offset_bottom = 380.0
+
+[node name="OnShadow(volume, options)-SonicAndMarsh2" type="Sprite2D" parent="."]
+modulate = Color(0, 0.85098, 0, 0)
+z_index = 2
+position = Vector2(1669, 286)
+scale = Vector2(0.079, 0.079)
+texture = ExtResource("19_eytht")
+
+[node name="On(sfxvolume, options)-SonicAndMarsh2" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1669, 411)
+scale = Vector2(0.079, 0.079)
+texture = ExtResource("19_eytht")
+
+[node name="onsfxbutton" type="Button" parent="On(sfxvolume, options)-SonicAndMarsh2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -645.569
+offset_top = -531.645
+offset_right = 595.431
+offset_bottom = 367.355
+
+[node name="OnShadow(sfxvolume, options)-SonicAndMarsh3" type="Sprite2D" parent="."]
+modulate = Color(0, 0.815686, 0, 0)
+z_index = 2
+position = Vector2(1669, 411)
+scale = Vector2(0.079, 0.079)
+texture = ExtResource("19_eytht")
+
+[node name="Galaxy(credits)-SonicAndMarsh" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1616, 258)
+scale = Vector2(0.113, 0.113)
+texture = ExtResource("20_of1i6")
+
+[node name="GalaxyShadow(credits)-SonicAndMarsh2" type="Sprite2D" parent="."]
+modulate = Color(0.619608, 0.67451, 0.0431373, 1)
+z_index = 2
+position = Vector2(1616, 258)
+scale = Vector2(0.113, 0.113)
+texture = ExtResource("20_of1i6")
+
+[node name="Slimette(credits)-SonicAndMarsh" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1875, 258)
+scale = Vector2(0.123, 0.123)
+texture = ExtResource("21_rajj2")
+
+[node name="SlimetteShadow(credits)-SonicAndMarsh2" type="Sprite2D" parent="."]
+modulate = Color(0.619608, 0.67451, 0.0431373, 1)
+z_index = 2
+position = Vector2(1875, 258)
+scale = Vector2(0.123, 0.123)
+texture = ExtResource("21_rajj2")
+
+[node name="Sega(credits)" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1587, 390)
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("22_wboim")
+
+[node name="SegaShadow(credits)" type="Sprite2D" parent="."]
+modulate = Color(0.619608, 0.67451, 0.0431373, 1)
+z_index = 2
+position = Vector2(1587, 390)
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("22_wboim")
+
+[node name="SonicTeam(credits)-SonicAndMarsh" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1911, 390)
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("23_1ns30")
+
+[node name="SonicTeamShadow(credits)-SonicAndMarsh2" type="Sprite2D" parent="."]
+modulate = Color(0.619608, 0.67451, 0.0431373, 1)
+z_index = 2
+position = Vector2(1911, 390)
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("23_1ns30")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_txnn0")
+
+[connection signal="mouse_entered" from="StoryMode-SonicAndMarsh/storymodebutton" to="." method="_on_storymodebutton_mouse_entered"]
+[connection signal="mouse_exited" from="StoryMode-SonicAndMarsh/storymodebutton" to="." method="_on_storymodebutton_mouse_exited"]
+[connection signal="pressed" from="StoryMode-SonicAndMarsh/storymodebutton" to="." method="_on_storymodebutton_pressed"]
+[connection signal="mouse_entered" from="optionstext/optionsbutton" to="." method="_on_optionsbutton_mouse_entered"]
+[connection signal="mouse_exited" from="optionstext/optionsbutton" to="." method="_on_optionsbutton_mouse_exited"]
+[connection signal="pressed" from="optionstext/optionsbutton" to="." method="_on_optionsbutton_pressed"]
+[connection signal="mouse_entered" from="CreditsText-SonicAndMarsh/creditbutton" to="." method="_on_creditbutton_mouse_entered"]
+[connection signal="mouse_exited" from="CreditsText-SonicAndMarsh/creditbutton" to="." method="_on_creditbutton_mouse_exited"]
+[connection signal="pressed" from="CreditsText-SonicAndMarsh/creditbutton" to="." method="_on_creditbutton_pressed"]
+[connection signal="mouse_entered" from="Back(options)-SonicAndMarsh/backbutt(opt)" to="." method="_on_backbuttopt_mouse_entered"]
+[connection signal="mouse_exited" from="Back(options)-SonicAndMarsh/backbutt(opt)" to="." method="_on_backbuttopt_mouse_exited"]
+[connection signal="pressed" from="Back(options)-SonicAndMarsh/backbutt(opt)" to="." method="_on_backbuttopt_pressed"]
+[connection signal="mouse_entered" from="Back(credits)-SonicAndMarsh2/backbutt(credits)" to="." method="_on_backbuttcredits_mouse_entered"]
+[connection signal="mouse_exited" from="Back(credits)-SonicAndMarsh2/backbutt(credits)" to="." method="_on_backbuttcredits_mouse_exited"]
+[connection signal="pressed" from="Back(credits)-SonicAndMarsh2/backbutt(credits)" to="." method="_on_backbuttcredits_pressed"]
+[connection signal="pressed" from="On(volume, options)-SonicAndMarsh/onvolumebutton" to="." method="_on_onvolumebutton_pressed"]
+[connection signal="pressed" from="On(sfxvolume, options)-SonicAndMarsh2/onsfxbutton" to="." method="_on_onsfxbutton_pressed"]

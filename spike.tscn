@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr3s4b2w6fa8r"]
+
+[ext_resource type="Texture2D" uid="uid://blde67apirkok" path="res://SonicMarsh/uielements and more/spike (up) - sonic and marsh-1.png.png" id="1_fbxrd"]
+[ext_resource type="Script" path="res://Spikes.gd" id="2_c6nbq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rlgt"]
+size = Vector2(27, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3fg26"]
+size = Vector2(32, 29)
+
+[node name="Spikes34" type="AnimatableBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("2_c6nbq")
+type = 1
+spikerotation = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fbxrd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -12.5)
+shape = SubResource("RectangleShape2D_6rlgt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_3fg26")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

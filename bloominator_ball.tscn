@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://beyw8j8xvmq3t"]
+
+[ext_resource type="Texture2D" uid="uid://bgce5a4tq16vn" path="res://SonicMarsh/mobs/bloominator ball - sonic and marsh-1.png.png" id="1_171nc"]
+[ext_resource type="Script" path="res://bloominatorball.gd" id="2_maykl"]
+
+[sub_resource type="Curve2D" id="Curve2D_f4mxj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -7, 48, 0, 0, 0, 0, -15.6035, 29.4529, 11.6891, -3.37428, -11.6891, 3.37428, -34, 7, 5.5909, 3.38604, -5.5909, -3.38604, -44, 16, 0, 0, 0, 0, -271, 813)
+}
+point_count = 5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_myw4k"]
+radius = 0.0353729
+
+[node name="BloominatorBall" type="Path2D"]
+z_as_relative = false
+position = Vector2(6, -55)
+curve = SubResource("Curve2D_f4mxj")
+script = ExtResource("2_maykl")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-7, 48)
+rotation = -2.15315
+rotates = false
+
+[node name="Sprite2D" type="Sprite2D" parent="PathFollow2D"]
+rotation = -4.1277
+texture = ExtResource("1_171nc")
+
+[node name="Area2D" type="Area2D" parent="PathFollow2D/Sprite2D"]
+scale = Vector2(16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Sprite2D/Area2D"]
+scale = Vector2(16, 16)
+shape = SubResource("CircleShape2D_myw4k")
+
+[connection signal="body_entered" from="PathFollow2D/Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cn8vvslsoeyk5"
+path="res://.godot/imported/Sonic 3 And Knuckles OST - Game Over.mp3-2a77f9aa6254d1725771c403a4972aa5.mp3str"
+
+[deps]
+
+source_file="res://SonicMarsh/audio/Sonic 3 And Knuckles OST - Game Over.mp3"
+dest_files=["res://.godot/imported/Sonic 3 And Knuckles OST - Game Over.mp3-2a77f9aa6254d1725771c403a4972aa5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

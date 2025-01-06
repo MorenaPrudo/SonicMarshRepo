@@ -1,0 +1,101 @@
+[gd_scene load_steps=15 format=3 uid="uid://cw1fm7gr2fgd6"]
+
+[ext_resource type="Script" path="res://Ring.gd" id="1_p2wpr"]
+[ext_resource type="Texture2D" uid="uid://br2ap22eydeck" path="res://SonicMarsh/uielements and more/rings - sonic and marsh.png" id="2_6xt2i"]
+[ext_resource type="Texture2D" uid="uid://gw76jk0hddq3" path="res://SonicMarsh/uielements and more/ring sparkle - sonic and marsh.png" id="3_26l7s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0cnc"]
+atlas = ExtResource("2_6xt2i")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5j1e"]
+atlas = ExtResource("2_6xt2i")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4hmd"]
+atlas = ExtResource("2_6xt2i")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3hc5"]
+atlas = ExtResource("2_6xt2i")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qhri7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0cnc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5j1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4hmd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3hc5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2kbc8"]
+radius = 8.46155
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8q3em"]
+atlas = ExtResource("3_26l7s")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_po6t8"]
+atlas = ExtResource("3_26l7s")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31un3"]
+atlas = ExtResource("3_26l7s")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qt15"]
+atlas = ExtResource("3_26l7s")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8182n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8q3em")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_po6t8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31un3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qt15")
+}],
+"loop": false,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="Ring" type="Node2D"]
+position = Vector2(-739, 87)
+script = ExtResource("1_p2wpr")
+
+[node name="ringsprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qhri7")
+frame_progress = 0.690984
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_2kbc8")
+
+[node name="particles" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_8182n")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="animation_finished" from="particles" to="." method="_on_particles_animation_finished"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwnxadl3h8luo"
+path="res://.godot/imported/Sonic the Hedgehog Sound Effect and Jingle Comparison.mp3-197423c7a1d033eca1df44640ab927b4.mp3str"
+
+[deps]
+
+source_file="res://SonicMarsh/audio/Sonic the Hedgehog Sound Effect and Jingle Comparison.mp3"
+dest_files=["res://.godot/imported/Sonic the Hedgehog Sound Effect and Jingle Comparison.mp3-197423c7a1d033eca1df44640ab927b4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

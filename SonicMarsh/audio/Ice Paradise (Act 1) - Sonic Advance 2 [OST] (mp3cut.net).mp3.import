@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b56x3ujl1cmc1"
+path="res://.godot/imported/Ice Paradise (Act 1) - Sonic Advance 2 [OST] (mp3cut.net).mp3-d2a5cd76e7a70ca34e77cca835250e25.mp3str"
+
+[deps]
+
+source_file="res://SonicMarsh/audio/Ice Paradise (Act 1) - Sonic Advance 2 [OST] (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/Ice Paradise (Act 1) - Sonic Advance 2 [OST] (mp3cut.net).mp3-d2a5cd76e7a70ca34e77cca835250e25.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

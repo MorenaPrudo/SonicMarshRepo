@@ -1,0 +1,683 @@
+[gd_scene load_steps=68 format=3 uid="uid://dmbs64g8bs7tc"]
+
+[ext_resource type="Script" path="res://vmza2cutscene.gd" id="1_dw6fr"]
+[ext_resource type="Texture2D" uid="uid://yrohnaruhnfg" path="res://SonicMarsh/sonicbasicmotion.png" id="3_npgyj"]
+[ext_resource type="Texture2D" uid="uid://dfct64nb4n0d5" path="res://SonicMarsh/sonic dialogue - sonic and marsh.png" id="4_i68q0"]
+[ext_resource type="Script" path="res://VMZBackground.gd" id="4_so3r3"]
+[ext_resource type="Texture2D" uid="uid://00pe7vvfn2dl" path="res://SonicMarsh/sonicfullspeed.png" id="5_mn7so"]
+[ext_resource type="Texture2D" uid="uid://noupumq63wsp" path="res://SonicMarsh/backgroundcomponents/vmz clouds 1 - sonic and marsh.png" id="5_sac6j"]
+[ext_resource type="Texture2D" uid="uid://cvlu8fu7fxgn4" path="res://SonicMarsh/marsh dialogue - sonic and marsh.png" id="5_x1ckl"]
+[ext_resource type="Texture2D" uid="uid://bnn0to0ofm0s5" path="res://SonicMarsh/backgroundcomponents/vmz clouds 2 - sonic and marsh.png" id="6_nccws"]
+[ext_resource type="FontFile" uid="uid://blne8s0vbsh4o" path="res://SonicMarsh/uielements and more/mania.ttf" id="6_xfpi0"]
+[ext_resource type="Texture2D" uid="uid://dgvr05n5s3hsw" path="res://SonicMarsh/backgroundcomponents/vmz clouds 3 - sonic and marsh.png" id="7_kjux5"]
+[ext_resource type="Texture2D" uid="uid://bcq4pe26ysc8p" path="res://SonicMarsh/backgroundcomponents/vmz clouds 4 - sonic and marsh.png" id="8_a6l23"]
+[ext_resource type="Texture2D" uid="uid://clmtuye3juu0c" path="res://SonicMarsh/backgroundcomponents/vmz sea 1 - sonic and marsh.png" id="9_oqhl5"]
+[ext_resource type="Texture2D" uid="uid://bv1ddyy47400s" path="res://SonicMarsh/backgroundcomponents/vmz sea 2 - sonic and marsh.png" id="10_1nmbt"]
+[ext_resource type="Script" path="res://MountainsCutsceneVMZA1.gd" id="11_kd4ly"]
+[ext_resource type="Texture2D" uid="uid://b81ob2try4c75" path="res://SonicMarsh/backgroundcomponents/vmz mountain 3 - sonic and marsh.png" id="12_lopft"]
+[ext_resource type="Texture2D" uid="uid://brmga760vg0i1" path="res://SonicMarsh/backgroundcomponents/vmz mountain 2 - sonic and marsh.png" id="13_hdqm4"]
+[ext_resource type="Texture2D" uid="uid://drvaktms7a28f" path="res://SonicMarsh/backgroundcomponents/vmz mountain 1 - sonic and marsh.png" id="14_5c2ta"]
+[ext_resource type="Texture2D" uid="uid://bk64fsnh7hu3f" path="res://SonicMarsh/backgroundcomponents/vmz mountain 4 - sonic and marsh.png" id="15_e5jgc"]
+[ext_resource type="Texture2D" uid="uid://dx6vyfu4vm0gg" path="res://SonicMarsh/marshfullspeed.webp" id="18_i0gwe"]
+[ext_resource type="Texture2D" uid="uid://bj4n5g3sfd37k" path="res://SonicMarsh/backgroundcomponents/vmz2 mountain 3 - sonic and marsh.png" id="18_wke5m"]
+[ext_resource type="Texture2D" uid="uid://bp8xg2rst602o" path="res://SonicMarsh/backgroundcomponents/vmz2 mountain 2 - sonic and marsh.png" id="19_q035j"]
+[ext_resource type="Texture2D" uid="uid://ctx6ye3jdx8xn" path="res://SonicMarsh/marshbasicmotion.png" id="20_dtkrq"]
+[ext_resource type="Texture2D" uid="uid://bqopx8pxp3ojy" path="res://SonicMarsh/backgroundcomponents/vmz2 mountain 1 - sonic and marsh.png" id="20_mosqk"]
+[ext_resource type="Texture2D" uid="uid://ckn0qcswkukkn" path="res://SonicMarsh/backgroundcomponents/vmz2 mountain 4 - sonic and marsh.png" id="21_mp642"]
+[ext_resource type="Texture2D" uid="uid://b5ia0yltfixbu" path="res://SonicMarsh/backgroundcomponents/vmza2cutscenep1 - sonic and marsh.png" id="21_oewfd"]
+[ext_resource type="Texture2D" uid="uid://b3qm3mg73u0d" path="res://SonicMarsh/marshidlebored.webp" id="22_fdoyi"]
+[ext_resource type="Texture2D" uid="uid://1pbyd6dct8in" path="res://SonicMarsh/backgroundcomponents/vmza2cutscenep2 - sonic and marsh.png" id="22_gyv2d"]
+[ext_resource type="AudioStream" uid="uid://cvdnfw8he20o4" path="res://SonicMarsh/audio/Angel Island Zone - Sonic Mania Plus [OST] (mp3cut.net).mp3" id="28_db1mb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oue80"]
+atlas = ExtResource("3_npgyj")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p81co"]
+atlas = ExtResource("3_npgyj")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0y8a6"]
+atlas = ExtResource("3_npgyj")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5hie"]
+atlas = ExtResource("3_npgyj")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rt61t"]
+atlas = ExtResource("3_npgyj")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6n03"]
+atlas = ExtResource("3_npgyj")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nx7hg"]
+atlas = ExtResource("3_npgyj")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50lah"]
+atlas = ExtResource("3_npgyj")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf67v"]
+atlas = ExtResource("5_mn7so")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aty6f"]
+atlas = ExtResource("5_mn7so")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he6bn"]
+atlas = ExtResource("5_mn7so")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opd3w"]
+atlas = ExtResource("5_mn7so")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6ieq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oue80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p81co")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0y8a6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5hie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rt61t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6n03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nx7hg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50lah")
+}],
+"loop": true,
+"name": &"basicmotion",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf67v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aty6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he6bn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opd3w")
+}],
+"loop": true,
+"name": &"fullspeed",
+"speed": 12.0
+}]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k3hx0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fpbfn"]
+font = ExtResource("6_xfpi0")
+font_size = 14
+font_color = Color(0, 0.105882, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tslr5"]
+font = ExtResource("6_xfpi0")
+font_size = 14
+font_color = Color(0, 1, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvcc8"]
+atlas = ExtResource("20_dtkrq")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvr65"]
+atlas = ExtResource("20_dtkrq")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qdcn"]
+atlas = ExtResource("20_dtkrq")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fp5y"]
+atlas = ExtResource("20_dtkrq")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fu842"]
+atlas = ExtResource("20_dtkrq")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0qpb"]
+atlas = ExtResource("20_dtkrq")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ver16"]
+atlas = ExtResource("20_dtkrq")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x34ei"]
+atlas = ExtResource("20_dtkrq")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwmfs"]
+atlas = ExtResource("18_i0gwe")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kv6j"]
+atlas = ExtResource("18_i0gwe")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1icjl"]
+atlas = ExtResource("18_i0gwe")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djijn"]
+atlas = ExtResource("18_i0gwe")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofld2"]
+atlas = ExtResource("18_i0gwe")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8e38"]
+atlas = ExtResource("18_i0gwe")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t7y1"]
+atlas = ExtResource("18_i0gwe")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2c0mn"]
+atlas = ExtResource("18_i0gwe")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5wae"]
+atlas = ExtResource("18_i0gwe")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkcuk"]
+atlas = ExtResource("18_i0gwe")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivhyb"]
+atlas = ExtResource("22_fdoyi")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_niyc7"]
+atlas = ExtResource("22_fdoyi")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x810k"]
+atlas = ExtResource("22_fdoyi")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xmij"]
+atlas = ExtResource("22_fdoyi")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uj411"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvcc8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvr65")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qdcn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fp5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fu842")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0qpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ver16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x34ei")
+}],
+"loop": true,
+"name": &"basicmotion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwmfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kv6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1icjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djijn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofld2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8e38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t7y1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2c0mn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5wae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkcuk")
+}],
+"loop": true,
+"name": &"fullspeed",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivhyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_niyc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x810k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xmij")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_dw6fr")
+
+[node name="Sonicbasicmotion" type="AnimatedSprite2D" parent="."]
+position = Vector2(280, 327)
+sprite_frames = SubResource("SpriteFrames_f6ieq")
+animation = &"basicmotion"
+frame_progress = 0.41912
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(274, 230)
+zoom = Vector2(2.1, 2.1)
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D"]
+modulate = Color(0.0823529, 0, 0.54902, 0)
+z_index = 5
+material = SubResource("CanvasItemMaterial_k3hx0")
+offset_left = -296.0
+offset_top = 66.0
+offset_right = 308.0
+offset_bottom = 80.0
+color = Color(0.196078, 0.196078, 0.176471, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Camera2D"]
+modulate = Color(1, 1, 1, 0)
+z_index = 5
+offset_left = -296.0
+offset_top = 52.0
+offset_right = 308.0
+offset_bottom = 66.0
+color = Color(0.196078, 0.196078, 0.176471, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Camera2D"]
+modulate = Color(1, 1, 1, 0)
+z_index = 4
+offset_left = -275.0
+offset_top = 66.0
+offset_right = 304.0
+offset_bottom = 80.0
+
+[node name="SonicDialogue-SonicAndMarsh" type="Sprite2D" parent="Camera2D"]
+modulate = Color(1, 1, 1, 0)
+z_index = 6
+position = Vector2(-215, 10.5)
+texture = ExtResource("4_i68q0")
+
+[node name="MarshDialogue-SonicAndMarsh" type="Sprite2D" parent="Camera2D"]
+modulate = Color(1, 1, 1, 0)
+z_index = 6
+position = Vector2(205, 6.5)
+texture = ExtResource("5_x1ckl")
+
+[node name="DialogueSonic" type="Label" parent="Camera2D"]
+visible = false
+z_index = 7
+offset_left = -150.0
+offset_top = -30.0
+offset_right = 59.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("6_xfpi0")
+label_settings = SubResource("LabelSettings_fpbfn")
+autowrap_mode = 3
+
+[node name="DialogueMarsh" type="Label" parent="Camera2D"]
+visible = false
+z_index = 7
+offset_left = -43.0
+offset_top = -32.0
+offset_right = 129.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("6_xfpi0")
+text = "You're the second to best me in speed."
+label_settings = SubResource("LabelSettings_tslr5")
+horizontal_alignment = 2
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="BackgroundA1" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="VMZBackground" type="Control" parent="BackgroundA1"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 0.2
+offset_right = 40.2
+offset_bottom = 40.0
+script = ExtResource("4_so3r3")
+
+[node name="VmzClouds1-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground"]
+texture_repeat = 2
+position = Vector2(895.3, 24)
+texture = ExtResource("5_sac6j")
+region_enabled = true
+region_rect = Rect2(0, 0, 1791, 32)
+
+[node name="VmzClouds2-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground"]
+texture_repeat = 2
+position = Vector2(895.3, 65)
+texture = ExtResource("6_nccws")
+region_enabled = true
+region_rect = Rect2(0, 0, 1791, 32)
+
+[node name="VmzClouds3-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground"]
+texture_repeat = 2
+position = Vector2(895.3, 95)
+texture = ExtResource("7_kjux5")
+region_enabled = true
+region_rect = Rect2(0, 0, 1791, 24)
+
+[node name="VmzClouds4-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground"]
+texture_repeat = 2
+position = Vector2(895.3, 120)
+texture = ExtResource("8_a6l23")
+region_enabled = true
+region_rect = Rect2(0, 0, 1791, 8)
+
+[node name="VmzSea1-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground"]
+modulate = Color(0.929412, 0.929412, 0.929412, 1)
+texture_repeat = 2
+position = Vector2(670.7, 285.4)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("9_oqhl5")
+region_enabled = true
+region_rect = Rect2(0, 0, 789, 97)
+
+[node name="VmzSea2-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground"]
+modulate = Color(0.929412, 0.929412, 0.929412, 1)
+texture_repeat = 2
+position = Vector2(670.75, 419.7)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("10_1nmbt")
+region_enabled = true
+region_rect = Rect2(0, 0, 789, 61)
+
+[node name="VmzSea3-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground"]
+modulate = Color(0.929412, 0.929412, 0.929412, 1)
+texture_repeat = 2
+position = Vector2(670.75, 523.3)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("10_1nmbt")
+region_enabled = true
+region_rect = Rect2(0, 0, 789, 61)
+
+[node name="VmzSea4-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground"]
+modulate = Color(0.929412, 0.929412, 0.929412, 1)
+texture_repeat = 2
+position = Vector2(670.75, 627)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("10_1nmbt")
+region_enabled = true
+region_rect = Rect2(0, 0, 789, 61)
+
+[node name="Mountains" type="Control" parent="BackgroundA1/VMZBackground"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -0.2
+offset_right = -0.2
+script = ExtResource("11_kd4ly")
+
+[node name="VmzMountain3-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(768, 286.6)
+texture = ExtResource("12_lopft")
+region_enabled = true
+region_rect = Rect2(0, 0, 1536, 20)
+
+[node name="VmzMountain2-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(768, 190)
+texture = ExtResource("13_hdqm4")
+region_enabled = true
+region_rect = Rect2(0, 0, 1536, 20)
+
+[node name="VmzMountain1-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(768, 156)
+texture = ExtResource("14_5c2ta")
+region_enabled = true
+region_rect = Rect2(0, 0, 1536, 48)
+
+[node name="VmzMountain4-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(766.5, 207)
+texture = ExtResource("15_e5jgc")
+region_enabled = true
+region_rect = Rect2(0, 0, 1533, 14)
+
+[node name="VmzMountain5-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(919.7, 222.3)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("15_e5jgc")
+region_enabled = true
+region_rect = Rect2(0, 0, 1533, 14)
+
+[node name="VmzMountain6-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(1149, 241)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("15_e5jgc")
+region_enabled = true
+region_rect = Rect2(0, 0, 1533, 14)
+
+[node name="VmzMountain7-SonicAndMarsh" type="Sprite2D" parent="BackgroundA1/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(1379, 264)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("15_e5jgc")
+region_enabled = true
+region_rect = Rect2(0, 0, 1533, 14)
+
+[node name="BackgroundA2" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="VMZBackground" type="Control" parent="BackgroundA2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 0.2
+offset_right = 40.2
+offset_bottom = 40.0
+script = ExtResource("4_so3r3")
+
+[node name="VmzClouds1-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground"]
+texture_repeat = 2
+position = Vector2(895.3, 24)
+texture = ExtResource("5_sac6j")
+region_enabled = true
+region_rect = Rect2(0, 0, 1791, 32)
+
+[node name="VmzClouds2-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground"]
+texture_repeat = 2
+position = Vector2(895.3, 65)
+texture = ExtResource("6_nccws")
+region_enabled = true
+region_rect = Rect2(0, 0, 1791, 32)
+
+[node name="VmzClouds3-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground"]
+texture_repeat = 2
+position = Vector2(895.3, 95)
+texture = ExtResource("7_kjux5")
+region_enabled = true
+region_rect = Rect2(0, 0, 1791, 24)
+
+[node name="VmzClouds4-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground"]
+texture_repeat = 2
+position = Vector2(895.3, 120)
+texture = ExtResource("8_a6l23")
+region_enabled = true
+region_rect = Rect2(0, 0, 1791, 8)
+
+[node name="VmzSea1-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground"]
+modulate = Color(0.929412, 0.929412, 0.929412, 1)
+texture_repeat = 2
+position = Vector2(670.7, 285.4)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("9_oqhl5")
+region_enabled = true
+region_rect = Rect2(0, 0, 789, 97)
+
+[node name="VmzSea2-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground"]
+modulate = Color(0.929412, 0.929412, 0.929412, 1)
+texture_repeat = 2
+position = Vector2(670.75, 419.7)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("10_1nmbt")
+region_enabled = true
+region_rect = Rect2(0, 0, 789, 61)
+
+[node name="VmzSea3-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground"]
+modulate = Color(0.929412, 0.929412, 0.929412, 1)
+texture_repeat = 2
+position = Vector2(670.75, 523.3)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("10_1nmbt")
+region_enabled = true
+region_rect = Rect2(0, 0, 789, 61)
+
+[node name="VmzSea4-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground"]
+modulate = Color(0.929412, 0.929412, 0.929412, 1)
+texture_repeat = 2
+position = Vector2(670.75, 627)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("10_1nmbt")
+region_enabled = true
+region_rect = Rect2(0, 0, 789, 61)
+
+[node name="Mountains" type="Control" parent="BackgroundA2/VMZBackground"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -0.2
+offset_right = -0.2
+script = ExtResource("11_kd4ly")
+
+[node name="VmzMountain3-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(768, 286.6)
+texture = ExtResource("18_wke5m")
+region_enabled = true
+region_rect = Rect2(0, 0, 1536, 20)
+
+[node name="VmzMountain2-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(768, 190)
+texture = ExtResource("19_q035j")
+region_enabled = true
+region_rect = Rect2(0, 0, 1536, 20)
+
+[node name="VmzMountain1-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(768, 156)
+texture = ExtResource("20_mosqk")
+region_enabled = true
+region_rect = Rect2(0, 0, 1536, 48)
+
+[node name="VmzMountain4-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(766.5, 207)
+texture = ExtResource("21_mp642")
+region_enabled = true
+region_rect = Rect2(0, 0, 1533, 14)
+
+[node name="VmzMountain5-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(919.7, 222.3)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("21_mp642")
+region_enabled = true
+region_rect = Rect2(0, 0, 1533, 14)
+
+[node name="VmzMountain6-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(1149, 241)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("21_mp642")
+region_enabled = true
+region_rect = Rect2(0, 0, 1533, 14)
+
+[node name="VmzMountain7-SonicAndMarsh" type="Sprite2D" parent="BackgroundA2/VMZBackground/Mountains"]
+texture_repeat = 2
+position = Vector2(1379, 264)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("21_mp642")
+region_enabled = true
+region_rect = Rect2(0, 0, 1533, 14)
+
+[node name="Marshfullspeed" type="AnimatedSprite2D" parent="."]
+position = Vector2(-20, 327)
+sprite_frames = SubResource("SpriteFrames_uj411")
+animation = &"fullspeed"
+
+[node name="Green" type="Sprite2D" parent="."]
+z_index = -1
+texture_repeat = 2
+position = Vector2(875, 462.5)
+texture = ExtResource("21_oewfd")
+region_enabled = true
+region_rect = Rect2(0, 833, 1920, 247)
+
+[node name="Orange" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+texture_repeat = 2
+position = Vector2(875, 462.5)
+texture = ExtResource("22_gyv2d")
+region_enabled = true
+region_rect = Rect2(0, 833, 1920, 247)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_db1mb")
+volume_db = -80.0

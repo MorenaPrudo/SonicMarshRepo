@@ -1,0 +1,118 @@
+[gd_scene load_steps=16 format=3 uid="uid://bw0pk6tj3lqdu"]
+
+[ext_resource type="Script" path="res://Airbubble.gd" id="1_01hqh"]
+[ext_resource type="Texture2D" uid="uid://dd01vg67k4bt3" path="res://SonicMarsh/Water/air bubble - sonic and marsh.png" id="2_veh4y"]
+[ext_resource type="Texture2D" uid="uid://ckxcu8vpwwtne" path="res://SonicMarsh/Water/bubble pop - sonic and marsh.png" id="3_l4mmt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2u0m"]
+atlas = ExtResource("2_veh4y")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mbxe"]
+atlas = ExtResource("2_veh4y")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5b5n"]
+atlas = ExtResource("2_veh4y")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y22md"]
+atlas = ExtResource("2_veh4y")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ola7"]
+atlas = ExtResource("2_veh4y")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbwgh"]
+atlas = ExtResource("2_veh4y")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3a2c"]
+atlas = ExtResource("3_l4mmt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57c4y"]
+atlas = ExtResource("3_l4mmt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov24i"]
+atlas = ExtResource("3_l4mmt")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hivk8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2u0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mbxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5b5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y22md")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ola7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbwgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3a2c")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57c4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov24i")
+}],
+"loop": false,
+"name": &"pop",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yapiy"]
+radius = 11.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ay6hq"]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[node name="Airbubble" type="Node2D" groups=["bubble"]]
+script = ExtResource("1_01hqh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hivk8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_yapiy")
+
+[node name="WaterParticles" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_ay6hq")
+amount = 3
+lifetime = 3.0
+texture = ExtResource("2_veh4y")
+direction = Vector2(0, -1)
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 30.0
+scale_amount_min = 0.1
+scale_amount_max = 0.25
+anim_speed_min = 7.0
+anim_speed_max = 7.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

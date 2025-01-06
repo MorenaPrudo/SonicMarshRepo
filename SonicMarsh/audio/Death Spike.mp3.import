@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjpdhxhf4ccfc"
+path="res://.godot/imported/Death Spike.mp3-969941f32d49b0327821e90030b3219f.mp3str"
+
+[deps]
+
+source_file="res://SonicMarsh/audio/Death Spike.mp3"
+dest_files=["res://.godot/imported/Death Spike.mp3-969941f32d49b0327821e90030b3219f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

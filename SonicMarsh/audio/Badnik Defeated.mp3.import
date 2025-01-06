@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hx86vj8tr387"
+path="res://.godot/imported/Badnik Defeated.mp3-03bb0fefed95318bf75d496313f168ee.mp3str"
+
+[deps]
+
+source_file="res://SonicMarsh/audio/Badnik Defeated.mp3"
+dest_files=["res://.godot/imported/Badnik Defeated.mp3-03bb0fefed95318bf75d496313f168ee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

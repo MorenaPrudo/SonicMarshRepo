@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcke2u730a8t8"]
+
+[ext_resource type="Script" path="res://buzzer_ball.gd" id="1_85wab"]
+[ext_resource type="Texture2D" uid="uid://kqdpf1qxcw42" path="res://SonicMarsh/mobs/buzzerball - sonic and marsh.png" id="1_86tlq"]
+
+[sub_resource type="Curve2D" id="Curve2D_uow8e"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -500, 200)
+}
+point_count = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8un6k"]
+atlas = ExtResource("1_86tlq")
+region = Rect2(0, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oag51"]
+atlas = ExtResource("1_86tlq")
+region = Rect2(8, 0, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cuomh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8un6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oag51")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ufu4l"]
+radius = 4.12311
+
+[node name="BuzzerBall" type="Path2D"]
+position = Vector2(35, 12)
+curve = SubResource("Curve2D_uow8e")
+script = ExtResource("1_85wab")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotates = false
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="PathFollow2D"]
+position = Vector2(0, -3)
+sprite_frames = SubResource("SpriteFrames_cuomh")
+
+[node name="Area2D" type="Area2D" parent="PathFollow2D/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Sprite2D/Area2D"]
+position = Vector2(0, 2.7)
+shape = SubResource("CircleShape2D_ufu4l")
+
+[connection signal="body_entered" from="PathFollow2D/Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,102 @@
+[gd_scene load_steps=15 format=3 uid="uid://dboyejb6m0ls8"]
+
+[ext_resource type="Script" path="res://DroppedRing.gd" id="1_n2hjj"]
+[ext_resource type="Texture2D" uid="uid://br2ap22eydeck" path="res://SonicMarsh/uielements and more/rings - sonic and marsh.png" id="2_834wp"]
+[ext_resource type="Texture2D" uid="uid://gw76jk0hddq3" path="res://SonicMarsh/uielements and more/ring sparkle - sonic and marsh.png" id="2_rvbsh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aa8f7"]
+radius = 7.07107
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wl6b"]
+atlas = ExtResource("2_rvbsh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhcmp"]
+atlas = ExtResource("2_rvbsh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70fre"]
+atlas = ExtResource("2_rvbsh")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdkgo"]
+atlas = ExtResource("2_rvbsh")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o106n"]
+atlas = ExtResource("2_834wp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knini"]
+atlas = ExtResource("2_834wp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyjr3"]
+atlas = ExtResource("2_834wp")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urddk"]
+atlas = ExtResource("2_834wp")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqxuh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wl6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhcmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70fre")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdkgo")
+}],
+"loop": false,
+"name": &"particles",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o106n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knini")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyjr3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urddk")
+}],
+"loop": true,
+"name": &"ring",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r7dda"]
+radius = 7.07107
+
+[node name="DroppedRing" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 4
+gravity_scale = 25.0
+lock_rotation = true
+script = ExtResource("1_n2hjj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_aa8f7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wqxuh")
+animation = &"particles"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_r7dda")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

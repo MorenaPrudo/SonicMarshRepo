@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btcubr3rs82py"
+path="res://.godot/imported/System Screen_ Select - Sonic Heroes [OST].mp3-9c7dad29dc8ee1c8f05c624a84b3548b.mp3str"
+
+[deps]
+
+source_file="res://SonicMarsh/audio/System Screen_ Select - Sonic Heroes [OST].mp3"
+dest_files=["res://.godot/imported/System Screen_ Select - Sonic Heroes [OST].mp3-9c7dad29dc8ee1c8f05c624a84b3548b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

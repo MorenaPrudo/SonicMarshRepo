@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d31nu8jjanw2t"
+path="res://.godot/imported/Title Screen - Sonic the Hedgehog 3 [OST].mp3-2008b7b486d388642d0794e6e27c7f21.mp3str"
+
+[deps]
+
+source_file="res://SonicMarsh/audio/Title Screen - Sonic the Hedgehog 3 [OST].mp3"
+dest_files=["res://.godot/imported/Title Screen - Sonic the Hedgehog 3 [OST].mp3-2008b7b486d388642d0794e6e27c7f21.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
